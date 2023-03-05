@@ -106,6 +106,7 @@ export const checkUser = async (req: Request, res: Response) => {
     if (user?.password !== password) {
       res.json("user is no recored password");
     }
+    res.json("user is recored password");
   } catch (error) {
     console.log(error);
   }
