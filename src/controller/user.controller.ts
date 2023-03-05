@@ -161,7 +161,11 @@ export const checkUserJoin = async (req: Request, res: Response) => {
   
       const users = await prisma.user.findMany({
         where: {
-           joiningYear: year,
+           joiningYear: 
+           {
+
+            gte: year
+           }
         },
       });
   
